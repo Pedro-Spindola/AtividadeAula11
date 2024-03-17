@@ -15,28 +15,37 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package atividade;
+package questao02;
 
 /**
  *
  * @author Pedro Spindola
- * @date 15/03/2024
- * @brief Class Onibus
+ * @date 17/03/2024
+ * @brief Class Departamento
  */
-public class Onibus extends Veiculo{
-    int assentos;
+public class Departamento {
+    String nome, sigla;
+
+    public Departamento(String nome, String sigla) {
+        this.nome = nome;
+        this.sigla = sigla;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
     
-    public Onibus(String placa, int ano, int assentos){
-    super(placa, ano);
-    this.assentos = assentos;
-    }
-    public void setAssentos(int assentos){
-        this.assentos = assentos;
-    }
-    public int getAssentos(){
-        return assentos;
-    }
-    public void exibirDados(){
-        System.out.println(String.format("--- Datelhes ---\nVeículo: Ônibus \nPlaca: " + placa + "\nAno: " + ano + "\nAssentos: " + assentos));
-    }
+    
 }

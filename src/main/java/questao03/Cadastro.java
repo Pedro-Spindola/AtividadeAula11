@@ -15,29 +15,27 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package atividade;
+package questao03;
 
 /**
  *
  * @author Pedro Spindola
- * @date 15/03/2024
- * @brief Class Caminhao
+ * @date 17/03/2024
+ * @brief Class Cadastro
  */
-public class Caminhao extends Veiculo{
-    int eixos;
+public class Cadastro {
+    private Clientes clientes;
+    private Endereco endereco;
     
-    public Caminhao (String placa, int ano, int eixos){
-    super(placa, ano);
-    this.eixos = eixos;
+    public Cadastro(String nome, String telefone, String rua, String complemento, String bairro, String cidade, String estado, int numero, int cep) {
+    clientes = new Clientes(nome, telefone);
+    endereco = new Endereco(rua, complemento, bairro, cidade, estado, numero, cep);
     }
-    public void setEixos(int eixos){
-        this.eixos = eixos;
-    }
-    public int getEixos(){
-        return eixos;
-    }
-    @Override
-    public void exibirDados(){
-        System.out.println(String.format("--- Datelhes ---\nVeículo: Caminhão \nPlaca: " + placa + "\nAno: " + ano + "\nEixos: " + eixos));
+    
+    public void ExibirCadastro()
+    {
+        System.out.println("Nome: " + clientes.getNome());
+        System.out.println("Curso: " + clientes.getTelefone());
+        endereco.ExibirEndereco();
     }
 }

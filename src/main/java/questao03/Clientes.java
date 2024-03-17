@@ -15,37 +15,36 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package atividade;
+package questao03;
 
 /**
  *
  * @author Pedro Spindola
- * @date 15/03/2024
- * @brief Class Veiculo
+ * @date 17/03/2024
+ * @brief Class Clientes
  */
-public class Veiculo {
-    String placa;
-    int ano;
-    
-    public Veiculo(){}
-    public Veiculo(String placa, int ano){
-        super();
-        this.placa = placa;
-        this.ano = ano;
+public class Clientes {
+    String nome;
+    String telefone;
+
+    public Clientes(String nome, String telefone) {
+        this.nome = nome;
+        this.telefone = telefone;
     }
-    public void setPlaca(String placa){
-        this.placa = placa;
+
+    public String getNome() {
+        return nome;
     }
-    public void setAno(int ano){
-        this.ano = ano;
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-    public String getPlaca(){
-        return placa;
+
+    public String getTelefone() {
+        return telefone;
     }
-    public int getAno(){
-        return ano;    
-    }
-    public void exibirDados(){
-        
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }
